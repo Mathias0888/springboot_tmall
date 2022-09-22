@@ -3,6 +3,7 @@ package com.how2java.tmall.service;
 import com.how2java.tmall.dao.UserDAO;
 import com.how2java.tmall.pojo.User;
 import com.how2java.tmall.util.Page4Navigator;
+import jdk.nashorn.internal.runtime.regexp.joni.ast.StringNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -31,7 +32,12 @@ public class UserService {
         return userDAO.findByName(name);
     }
 
+    public User get(String name,String password){
+        return userDAO.findByNameAndPassword(name,password);
+    }
+
     public void add(User user){
         userDAO.save(user);
     }
+
 }
