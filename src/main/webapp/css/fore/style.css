@@ -1669,6 +1669,7 @@ div.orderTypeLastOne {
 	overflow: hidden;
 	float: none !important;
 	border-bottom: 2px solid #E8E8E8;
+	height: 35px;
 }
 
 a.noRightborder {
